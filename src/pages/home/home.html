@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>To Do</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let task of tasks" (tap)="onAddClick(task.id)">
+    <ion-card-header>
+      {{task.task}}
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-fab bottom center>
+    <button ion-fab (tap)="onAddClick()" ><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
